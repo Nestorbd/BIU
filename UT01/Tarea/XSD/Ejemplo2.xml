@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Autor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Ejemplo2.xsd">
+    <Nombre>Pedro Salinas</Nombre>
+    <Indice>
+      <Elemento name="Biografía">
+        <Subelemento>Primeros años</Subelemento>
+        <Subelemento>Matrimonio y cátedra</Subelemento>
+        <Subelemento>Romance</Subelemento>
+        <Subelemento>Guerra Civil y exilio</Subelemento>
+      </Elemento>
+      <Elemento name="Poeta del 27">
+        <Subelemento>Etapas poéticas</Subelemento>
+        <Subelemento>Poeta del amor</Subelemento>
+      </Elemento>
+      <Elemento name="Prosista"></Elemento>
+      <Elemento name="Dramaturgo"></Elemento>
+      <Elemento name="Obra">
+        <Subelemento>Poesía</Subelemento>
+        <Subelemento>Teatro</Subelemento>
+        <Subelemento>Traducciones</Subelemento>
+        <Subelemento>Narrativa</Subelemento>
+        <Subelemento>Ensayo</Subelemento>
+        <Subelemento>Epistolario</Subelemento>
+      </Elemento>
+      <Elemento name="Referencias"></Elemento>
+      <Elemento name="Notas"></Elemento>
+      <Elemento name="Bibliografía"></Elemento>
+    </Indice>
+  </Autor>

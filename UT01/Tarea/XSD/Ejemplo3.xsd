@@ -1,0 +1,51 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Estrenos_Disney">
+    <xs:annotation>
+      <xs:documentation>Escribe un documento XML bien formado para representar los datos más
+        relevantes de los cinco primeros estrenos de películas de Walt Disney</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Pelicula" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType mixed="true">
+            <xs:sequence>
+              <xs:element type="xs:string" name="Nombre" />
+              <xs:element type="xs:date" name="Fecha" />
+              <xs:element name="Directores">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Director" maxOccurs="unbounded" minOccurs="1" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Escritores">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Escritor" maxOccurs="unbounded" minOccurs="1" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Productores">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Productor" maxOccurs="unbounded"
+                      minOccurs="1" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Compositores">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Compositor" maxOccurs="unbounded"
+                      minOccurs="1" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

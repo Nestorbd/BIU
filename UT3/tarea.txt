@@ -1,0 +1,22 @@
+cd workspace
+mkdir checksum
+cd checksum
+wget https://github.com/curso-iabd-uclm/hadoop/raw/main/quijote.txt
+cksum quijote.txt
+md5sum quijote.txt
+sha256sum quijote.txt
+hdfs dfs -put quijote.txt
+hdfs dfs -ls quijote.txt
+hdfs dfs -cat quijote.txt | md5sum
+hdfs dfs -checksum quijote.txt
+hadoop fs -Ddfs.checksum.combine.mode=COMPOSITE_CRC -checksum quijote.txt
+mkdir temp
+cd temp
+hadoop fs -get -crc quijote.txt
+ls -lrta
+hadoop distcp -Ddfs.checksum.combine.mode=COMPOSITE_CRC -Dfs.gs.checksum.type=CRC3
+hadoop fs -get -crc quijote.txt
+ls -lrta
+hadoop distcp -Ddfs.checksum.combine.mode=COMPOSITE_CRC -Dfs.gs.checksum.type=CRC32C quijote.txt /user/cloudera/quijote/quijote.txt
+hdfs dfs -checksum quijote.txt
+hdfs dfs -checksum quijote/quijote.txt
